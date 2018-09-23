@@ -1,0 +1,57 @@
+{
+  "name": "github-unfold-news",
+  "description": "",
+  "license": "MIT",
+  "author": "xxhomey19",
+  "version": "0.0.1",
+  "main": "index.js",
+  "scripts": {
+    "build": "cross-env NODE_ENV=production webpack --config webpack.config.js --display-error-details --progress --colors",
+    "precommit": "lint-staged",
+    "dev": "cross-env NODE_ENV=development webpack --config ./webpack.config.js --watch",
+    "lint": "eslint src",
+    "lint:fix": "npm run lint -- --fix",
+    "zip:chrome": "npm run build && zip -r build/GITHUB_UNFOLD_ACTIVITY_$npm_package_version.zip build"
+  },
+  "dependencies": {
+    "jsdom": "^12.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.1.0",
+    "@babel/plugin-transform-runtime": "^7.1.0",
+    "@babel/preset-env": "^7.1.0",
+    "babel-eslint": "^9.0.0",
+    "babel-loader": "^8.0.2",
+    "clean-webpack-plugin": "^0.1.19",
+    "copy-webpack-plugin": "^4.5.2",
+    "cross-env": "^5.2.0",
+    "eslint": "^5.6.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-prettier": "^3.1.0",
+    "eslint-plugin-babel": "^5.2.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-prettier": "^2.6.2",
+    "eslint-plugin-react": "^7.11.1",
+    "html-loader": "^0.5.5",
+    "husky": "^1.0.0-rc.15",
+    "lint-staged": "^7.3.0",
+    "prettier": "^1.14.3",
+    "prettier-package-json": "^2.0.1",
+    "uglifyjs-webpack-plugin": "^2.0.1",
+    "webpack": "^4.19.1",
+    "webpack-cli": "^3.1.1",
+    "webpack-dev-server": "^3.1.8",
+    "write-file-webpack-plugin": "^4.4.0"
+  },
+  "lint-staged": {
+    "package.json": [
+      "prettier-package-json --write",
+      "git add"
+    ],
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ]
+  }
+}
