@@ -3,7 +3,7 @@
   "description": "",
   "license": "MIT",
   "author": "xxhomey19",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "main": "index.js",
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack --config webpack.config.js --display-error-details --progress --colors",
