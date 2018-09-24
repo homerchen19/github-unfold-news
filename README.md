@@ -16,7 +16,7 @@
 
 ## Install
 
-<a href="https://chrome.google.com/webstore/detail/github-unfold-news/ficfmibkjjnpogdcfhfokmihanoldbfe">
+<a href="https://chrome.google.com/webstore/detail/github-unfold-news/hmihjhffenpipakeeplcjmeceafielki">
 <img border="0" src="https://developer.chrome.com/webstore/images/ChromeWebStore_BadgeWBorder_v2_496x150.png" width="172">
 </a>
 <br/>
